@@ -1,3 +1,4 @@
+import 'package:first_class_flutter/HOME_PAGE/list_view_builder.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,13 +11,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Center(child: Text("Home Page")),
-        ),
-        body: Padding(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: const Center(child: Text("Home Page")),
+      ),
+      body: SafeArea(
+        child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
             child: Column(
@@ -25,23 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: double.infinity,
                   color: Colors.amber,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          color: Colors.black,
-                          width: MediaQuery.of(context).size.width * 0.25,
-                          height: MediaQuery.of(context).size.height * 0.25,
-                        ),
-                      ),
-
-                      // Card(
-                      //   color: Colors.cyan,
-                      //   child: Text("1st card"),
-                      // )
-                    ],
-                  ),
+                  child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListViewBuilder()),
                 )
               ],
             ),
