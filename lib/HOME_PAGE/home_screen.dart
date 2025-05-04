@@ -29,6 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListViewBuilder()),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  child: Card(
+                    color: Color.fromARGB(255, 243, 237, 237),
+                  ),
                 )
               ],
             ),
