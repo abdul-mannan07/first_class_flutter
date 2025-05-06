@@ -10,19 +10,27 @@ class ListViewBuilder extends StatefulWidget {
 class _ListViewBuilderState extends State<ListViewBuilder> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      //list view
-      scrollDirection: Axis.horizontal,
-      itemCount: 4,
-      itemBuilder: (context, index) {
-        return Container(
-          width: MediaQuery.of(context).size.width * 0.25,
-          height: MediaQuery.of(context).size.height * 0.25,
-          child: Card(
-            color: Colors.blueGrey,
-          ),
-        );
-      },
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.2,
+                  width: double.infinity,
+                  color: Colors.amber,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+          //list view
+          scrollDirection: Axis.horizontal,
+          itemCount: 4,
+          itemBuilder: (context, index) {
+            return Container(
+              width: MediaQuery.of(context).size.width * 0.70,
+              height: MediaQuery.of(context).size.height * 0.25,
+              child: Card(
+                color: Colors.blueGrey,
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
