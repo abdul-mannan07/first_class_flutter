@@ -19,13 +19,12 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Center(child: Text("Home Page")),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            child: Column(
-              children: [ListViewBuilder(), HomeScreenBody()],
-            ),
-          ),
+        child: Row(
+          children: [
+            Expanded(child: HomeSlider())
+
+            // HomeScreenBody()
+          ],
         ),
       ),
     );
