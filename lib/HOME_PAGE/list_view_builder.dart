@@ -48,10 +48,17 @@ class _HomeSliderState extends State<HomeSlider> {
       height: MediaQuery.of(context).size.height * 0.2,
       color: Colors.red,
       child: ListView.builder(
-        itemBuilder: (contex, index) {
-          return Container();
-        },
-      ),
+          itemCount: 6,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                  width: MediaQuery.of(context).size.width * 0.50,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  color: Colors.green),
+            );
+          }),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:first_class_flutter/HOME_PAGE/list_view_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'home_screen_body.dart';
 
@@ -19,10 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Center(child: Text("Home Page")),
       ),
       body: SafeArea(
-        child: Row(
+        child: Column(
           children: [
-            Expanded(child: HomeSlider())
-
+            HomeSlider(),
             // HomeScreenBody()
           ],
         ),
@@ -30,3 +30,45 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+
+// class HomeScreen extends StatefulWidget {
+//   const HomeScreen({super.key});
+
+//   @override
+//   State<HomeScreen> createState() => _HomeScreenState();
+// }
+
+// class _HomeScreenState extends State<HomeScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Row(
+//         children: [
+//           Container(
+//             height: 100,
+//             width: 100,
+//             color: Colors.red,
+//           ),
+//           Expanded(
+//             flex: 1,
+//             child: Container(
+//               height: 100,
+//               width: 100,
+//               color: Colors.yellow,
+//             ),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }

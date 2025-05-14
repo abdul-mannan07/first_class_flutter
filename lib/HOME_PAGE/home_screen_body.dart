@@ -10,20 +10,20 @@ class HomeScreenBody extends StatefulWidget {
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * 0.70,
       child: Card(
-        color: Color.fromARGB(255, 243, 237, 237),
+        color: const Color.fromARGB(255, 243, 237, 237),
         child: ListView.builder(
           //list view
           scrollDirection: Axis.vertical,
           itemCount: 4,
           itemBuilder: (context, index) {
-            return Container(
+            return SizedBox(
               width: MediaQuery.of(context).size.width * 0.70,
               height: MediaQuery.of(context).size.height * 0.25,
-              child: Card(
+              child: const Card(
                 color: Colors.blueGrey,
               ),
             );
