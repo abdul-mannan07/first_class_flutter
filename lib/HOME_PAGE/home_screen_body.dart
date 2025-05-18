@@ -10,25 +10,28 @@ class HomeScreenBody extends StatefulWidget {
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.70,
-      child: Card(
-        color: const Color.fromARGB(255, 243, 237, 237),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        // color: Colors.yellow,
         child: ListView.builder(
-          //list view
-          scrollDirection: Axis.vertical,
-          itemCount: 4,
-          itemBuilder: (context, index) {
-            return SizedBox(
-              width: MediaQuery.of(context).size.width * 0.70,
-              height: MediaQuery.of(context).size.height * 0.25,
-              child: const Card(
-                color: Colors.blueGrey,
-              ),
-            );
-          },
-        ),
+            itemCount: 10,
+            itemBuilder: (contex, index) {
+              return Card(
+                child: ListTile(
+                  leading: Container(
+                    width: 400,
+                    child: Image.asset("assets/mercedes-maybach-s-class.jpg"),
+                  ),
+                  title: Text(
+                    "data",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  ),
+                  subtitle: Text(
+                      "In various contexts, prompt can mean: an instruction or signal for action, quick or ready to act, or something that encourages or reminds someone of something. It can also be a symbol on a computer screen indicating readiness to receive input. "),
+                ),
+              );
+            }),
       ),
     );
   }

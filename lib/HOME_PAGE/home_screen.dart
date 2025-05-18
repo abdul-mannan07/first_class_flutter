@@ -21,23 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SafeArea(
         child: Column(
-          children: [
-            HomeSlider(),
-            // HomeScreenBody()
-          ],
+          children: [HomeSlider(), Expanded(child: HomeScreenBody())],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
 
 // import 'package:flutter/material.dart';
 

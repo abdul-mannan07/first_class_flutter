@@ -44,21 +44,24 @@ class HomeSlider extends StatefulWidget {
 class _HomeSliderState extends State<HomeSlider> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.2,
-      color: Colors.red,
-      child: ListView.builder(
-          itemCount: 6,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  width: MediaQuery.of(context).size.width * 0.50,
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  color: Colors.green),
-            );
-          }),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.3,
+        // color: Colors.red,
+        child: ListView.builder(
+            itemCount: 6,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                    width: MediaQuery.of(context).size.width * 0.50,
+                    height: MediaQuery.of(context).size.height * 0.15,
+                    child: Image.asset("assets/mercedes-maybach-s-class.jpg")),
+              );
+            }),
+      ),
     );
   }
 }
