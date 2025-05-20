@@ -56,8 +56,10 @@ class _HomeSliderState extends State<HomeSlider> {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                    width: MediaQuery.of(context).size.width * 0.50,
-                    height: MediaQuery.of(context).size.height * 0.15,
+                    width: 300,
+                    height: 300,
+                    // width: MediaQuery.of(context).size.width * 0.50,
+                    // height: MediaQuery.of(context).size.height * 0.15,
                     child: Image.asset("assets/mercedes-maybach-s-class.jpg")),
               );
             }),
