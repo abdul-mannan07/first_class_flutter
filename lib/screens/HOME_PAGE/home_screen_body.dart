@@ -48,20 +48,23 @@ class HomeScreenBody extends StatefulWidget {
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Container(
-          height: 300,
-          width: 300,
-          color: Colors.redAccent,
-        ),
-        Container(
-          height: 400,
-          width: 400,
-          color: Colors.cyan,
-        ),
-      ],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+            height: 300,
+            width: 300,
+            color: Colors.redAccent,
+          ),
+          Container(
+            height: 400,
+            width: 400,
+            color: Colors.cyan,
+          ),
+        ],
+      ),
     );
   }
 }

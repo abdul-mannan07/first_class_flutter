@@ -1,4 +1,5 @@
-import 'package:first_class_flutter/HOME_PAGE/home_screen.dart';
+import 'package:first_class_flutter/screens/HOME_PAGE/home_screen.dart';
+import 'package:first_class_flutter/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return  MaterialApp(
+       theme:  ThemeData(
+        primaryColor: Colors.green[900],
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+      ),
+       debugShowCheckedModeBanner: false,
       title: "OUR FIRST PROJECT",
-      home: HomeScreen(),
+      home: MainScreenBody(),
       //home screen
     );
   }
