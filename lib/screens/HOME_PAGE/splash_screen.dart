@@ -44,19 +44,19 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    Timer(Duration( seconds: 3), () {
-
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeScreen()))
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => HomeScreen()));
     });
   }
 
-
-@override
+  @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
     _controller.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
