@@ -13,10 +13,10 @@ class MainScreenBody extends StatefulWidget {
 class _MainScreenBodyState extends State<MainScreenBody> {
   final List screenItems = [
     HomeScreen(),
-    SettingScreen(),
     FavScreen(),
+    SettingScreen(),
   ];
-  final List screenName = ["Home Page", "Setting Page", "Fav Page"];
+  final List screenName = ["Home Page", "Fav Page", "Setting Page"];
   var currentIndexNo = 0;
   onTapScteen(index) {
     setState(() {

@@ -2,7 +2,7 @@ import 'package:first_class_flutter/screens/HOME_PAGE/list_view_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'home_screen_body.dart';
+import 'hs_body.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // ),
       body: SafeArea(
         child: Column(
-          children: [HomeSlider(), Expanded(child: HomeScreenBody())],
+          children: [HomeSlider(), HomeScreenBody()],
         ),
       ),
     );

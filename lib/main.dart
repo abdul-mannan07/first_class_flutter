@@ -1,6 +1,4 @@
-import 'package:first_class_flutter/screens/HOME_PAGE/home_screen.dart';
 import 'package:first_class_flutter/screens/HOME_PAGE/splash_screen.dart';
-import 'package:first_class_flutter/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
