@@ -1,3 +1,118 @@
+import 'package:flutter/material.dart';
+
+class HomeScreenBody extends StatefulWidget {
+  const HomeScreenBody({super.key});
+
+  @override
+  State<HomeScreenBody> createState() => _HomeScreenBodyState();
+}
+
+class _HomeScreenBodyState extends State<HomeScreenBody> {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsetsGeometry.all(0),
+            //const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            child: Align(
+              alignment: Alignment.center,
+              child: Card(
+                //color: Colors.amberAccent,
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: ListView(children: [
+                    Image.asset('assets/logo.png'),
+                    Text("data")
+                  ]), // This now makes sense because Align centers it
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+
+    // return SingleChildScrollView(
+    //   scrollDirection: Axis.horizontal,
+    //   child: Row(
+    //     children: [
+    //       Card(
+    //         color: Colors.blue,
+    //         child: Container(
+    //           height: 200,
+    //           width: 150,
+    //         ),
+    //         shape: RoundedRectangleBorder(
+    //           side: BorderSide(color: Colors.black, width: 1),
+    //           borderRadius: BorderRadius.circular(5),
+    //         ),
+    //       ),
+    //       Card(
+    //         color: Colors.blue,
+    //         child: Container(
+    //           height: 200,
+    //           width: 150,
+    //         ),
+    //         shape: RoundedRectangleBorder(
+    //           side: BorderSide(color: Colors.black, width: 1),
+    //           borderRadius: BorderRadius.circular(5),
+    //         ),
+    //       ),
+    //       Card(
+    //         color: Colors.blue,
+    //         child: Container(
+    //           height: 200,
+    //           width: 150,
+    //         ),
+    //         shape: RoundedRectangleBorder(
+    //           side: BorderSide(color: Colors.black, width: 1),
+    //           borderRadius: BorderRadius.circular(5),
+    //         ),
+    //       ),
+    //       Card(
+    //         color: Colors.blue,
+    //         child: Container(
+    //           height: 200,
+    //           width: 150,
+    //         ),
+    //         shape: RoundedRectangleBorder(
+    //           side: BorderSide(color: Colors.black, width: 1),
+    //           borderRadius: BorderRadius.circular(5),
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // );
+    // return SingleChildScrollView(
+    //   scrollDirection: Axis.horizontal,
+    //   child: Row(
+    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+    //     children: [
+    //       Container(
+    //         height: 300,
+    //         width: 300,
+    //         color: Colors.redAccent,
+    //       ),
+    //       Container(
+    //         height: 400,
+    //         width: 400,
+    //         color: Colors.cyan,
+    //       ),
+    //     ],
+    //   ),
+    // );
+  }
+} 
+
 // import 'package:flutter/material.dart';
 
 // class HomeScreenBody extends StatefulWidget {
@@ -36,43 +151,3 @@
 //     );
 //   }
 // }
-import 'package:flutter/material.dart';
-
-class HomeScreenBody extends StatefulWidget {
-  const HomeScreenBody({super.key});
-
-  @override
-  State<HomeScreenBody> createState() => _HomeScreenBodyState();
-}
-
-class _HomeScreenBodyState extends State<HomeScreenBody> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      width: 100,
-      child: Card(
-        shape: Border.all(width: 1),
-        color: Colors.blue,
-      ),
-    );
-    // return SingleChildScrollView(
-    //   scrollDirection: Axis.horizontal,
-    //   child: Row(
-    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-    //     children: [
-    //       Container(
-    //         height: 300,
-    //         width: 300,
-    //         color: Colors.redAccent,
-    //       ),
-    //       Container(
-    //         height: 400,
-    //         width: 400,
-    //         color: Colors.cyan,
-    //       ),
-    //     ],
-    //   ),
-    // );
-  }
-}
