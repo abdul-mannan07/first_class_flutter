@@ -12,34 +12,50 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          crossAxisSpacing: 5,
+          mainAxisSpacing: 5,
         ),
         itemCount: 10,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsetsGeometry.all(0),
-            //const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-            child: Align(
-              alignment: Alignment.center,
-              child: Card(
-                //color: Colors.amberAccent,
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  child: ListView(children: [
-                    Image.asset('assets/logo.png'),
-                    Text("data")
-                  ]), // This now makes sense because Align centers it
+            padding:
+                EdgeInsets.all(0), // ✅ Fixed (was EdgeInsetsGeometry.all(0))
+            child: Card(
+              // color: Colors.amberAccent,
+              child: Container(
+                height: 400,
+                width: 300,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: AspectRatio(
+                        aspectRatio: 3 / 4,
+                        child: Image.asset('assets/logo.png'),
+                      ),
+                    ),
+                    Text(
+                      "French Cuisine",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
+                // child: ListView(
+                //   children: [
+                //     Image.asset('assets/logo.png'),
+                //     const Text("data"),
+                //   ],
+                // ),
               ),
             ),
           );
         },
       ),
     );
+  }
+}
+
 
     // return SingleChildScrollView(
     //   scrollDirection: Axis.horizontal,
@@ -110,8 +126,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
     //     ],
     //   ),
     // );
-  }
-} 
+//   }
+// } 
 
 // import 'package:flutter/material.dart';
 
