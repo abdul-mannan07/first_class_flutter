@@ -1,8 +1,15 @@
+import 'package:first_class_flutter/provider/statemanagement.dart';
 import 'package:first_class_flutter/screens/HOME_PAGE/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ProviderStateManagement()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

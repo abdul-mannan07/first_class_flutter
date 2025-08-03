@@ -1,4 +1,6 @@
+import 'package:first_class_flutter/provider/statemanagement.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -8,13 +10,14 @@ class HomeScreenBody extends StatefulWidget {
 }
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
-  List<bool> isFavorited = List.generate(10, (_) => false);
   //final int index = 0;
 
   // = Icon(Icons.favorite_border_outlined);
-  // final Icon currentIcons2 = Icon(Icons.favorite);
+  // final Icon currentIcons2 = Icon(Icons.favorite); 
   @override
   Widget build(BuildContext context) {
+    final provider =
+        Provider.of<ProviderStateManagement>(context);
     return Expanded(
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -71,15 +74,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                               fontWeight: FontWeight.bold,
                             )),
                         ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                isFavorited[index] = !isFavorited[index];
-                                // currentState != true;
-                                // index = 1;
-                              });
-                            },
+                            onPressed: () => provider.fav(index),
                             child: Icon(
-                              isFavorited[index]
+                              provider.isFavorited[index]
                                   ? Icons.favorite
                                   : Icons.favorite_border_outlined,
                               size: 20,
